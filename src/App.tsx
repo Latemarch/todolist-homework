@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Provider } from "react-redux";
+import { Outlet } from "react-router-dom";
+import styled from "styled-components";
+import Header from "./components/Header";
+import Input from "./components/Input";
+import store from "./fitures/store";
+
+const Container = styled.div`
+	height: 50%;
+	max-height: 1000px;
+	min-height: 300px;
+	width: 50%;
+	max-width: 500px;
+	min-width: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 10px;
+	overflow: hidden;
+`;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Provider store={store}>
+			<Container>
+				<Header />
+				<Outlet />
+				<Input />
+			</Container>
+		</Provider>
+	);
 }
 
 export default App;
