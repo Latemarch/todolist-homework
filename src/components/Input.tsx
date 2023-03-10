@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
-import { addText } from "../fitures/store";
+import { addText } from "../features/store";
 const Form = styled.form`
 	background-color: tomato;
 	height: 10%;

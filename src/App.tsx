@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 import Header from "./components/Header";
 import Input from "./components/Input";
-import store from "./fitures/store";
+import store from "./features/store";
 
 const Container = styled.div`
 	height: 50%;

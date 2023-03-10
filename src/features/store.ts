@@ -71,15 +71,15 @@ const toDoSlice = createSlice({
 export const { addToDo, deleteToDo, updateToDo, addText } = toDoSlice.actions;
 
 export interface IFilter {
-	filter: string;
+	filter: "Active" | "Completed" | "All" | "Detail";
 }
-
+export type TFilter = "Active" | "Completed" | "All" | "Detail";
 const initialFilterState: IFilter = { filter: "All" };
 const filterSlice = createSlice({
 	name: "filter",
 	initialState: initialFilterState,
 	reducers: {
-		updateFilter: (state, action: PayloadAction<string>) => {
+		updateFilter: (state, action: PayloadAction<TFilter>) => {
 			state.filter = action.payload;
 		},
 	},

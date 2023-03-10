@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { updateFilter } from "../fitures/store";
+import { IFilter, TFilter, updateFilter } from "../features/store";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../pages/All";
 const HeaderWrapper = styled.div`
@@ -25,7 +25,7 @@ const HeaderButton = styled.button<{ filter: string; activeFilter: string }>`
 	}
 `;
 
-const filters = ["All", "Active", "Completed"];
+const filters: TFilter[] = ["All", "Active", "Completed"];
 
 export default function Header() {
 	const activeFilter = useSelector((state: RootState) => state.filter.filter);

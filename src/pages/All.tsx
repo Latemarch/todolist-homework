@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 import ToDo from "../components/ToDo";
-import { IToDo } from "../fitures/store";
+import { IToDo } from "../features/store";
 import { v4 as uuid } from "uuid";
 
 export interface RootState {

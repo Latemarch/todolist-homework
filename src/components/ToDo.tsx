@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { deleteToDo, IToDo, updateFilter, updateToDo } from "../fitures/store";
+import { deleteToDo, IToDo, updateFilter, updateToDo } from "../features/store";
 import { BsTrash } from "react-icons/bs";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
@@ -15,7 +15,7 @@ const Li = styled.li`
 		cursor: pointer;
 	}
 `;
-const ListContent = styled.li`
+const ListContent = styled.div`
 	list-style: none;
 	display: flex;
 	align-items: center;

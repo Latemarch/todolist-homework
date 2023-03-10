@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import ToDo from "../components/ToDo";
-import { IToDo } from "../fitures/store";
+import { IToDo } from "../features/store";
 import { Ul } from "./All";
 import { v4 as uuid } from "uuid";
 interface RootState {
